@@ -35,4 +35,13 @@ class Gis extends CI_Controller {
         );
 		$this->load->view('v_template', $data, false);
 	}
+
+	public function viewbasemap()
+	{
+        $data = array(
+            'judul' => 'View Base Map',
+            'page' => 'v_basemap',
+        );
+		$this->load->view('v_template', $data, false);
+	}
 }

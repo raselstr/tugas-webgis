@@ -1,8 +1,8 @@
-<div id="map" style="width: 100%; height: 1200px;"></div>
+<div id="map" style="width: 100%; height: 600px;"></div>
 
 <script>
 
-	var map = L.map('map').setView([2.987555901997222, 99.6228673583151], 20);
+	var map = L.map('map').setView([2.987555901997222, 99.6228673583151], 13);
 
 	var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		maxZoom: 19,
