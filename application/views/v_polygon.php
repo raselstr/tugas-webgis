@@ -83,18 +83,8 @@
                    [2.980503262151746, 99.56881692489416],
                    [2.98455326871544, 99.56890275557808],
                    [2.984655983354243, 99.56520898905258],
-
-
-
-
-
-
-
-
-
-
                 ];
 
-    var polygon = L.polygon(latkisbar, {color: 'red'}).addTo(map);
+    var polygon = L.polygon(latkisbar, {color: 'blue'}).addTo(map);
 
 </script>
