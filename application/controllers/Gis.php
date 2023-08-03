@@ -71,4 +71,13 @@ class Gis extends CI_Controller {
         );
 		$this->load->view('v_template', $data, false);
 	}
+
+	public function viewpolygon()
+	{
+        $data = array(
+            'judul' => 'View Polygon',
+            'page' => 'v_polygon',
+        );
+		$this->load->view('v_template', $data, false);
+	}
 }
