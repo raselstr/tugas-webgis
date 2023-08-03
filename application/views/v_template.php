@@ -54,7 +54,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         <a  href="<?= base_url('gis/viewbasemap'); ?>"><i class="fa fa-qrcode"></i> View Base Map</a>
                     </li>
 						   <li  >
-                        <a  href="chart.html"><i class="fa fa-bar-chart-o"></i> Marker</a>
+                        <a  href="<?= base_url('gis/viewmarker'); ?>"><i class="fa fa-bar-chart-o"></i> Marker</a>
                     </li>	
                       <li  >
                         <a  href="table.html"><i class="fa fa-table"></i> Circle</a>
