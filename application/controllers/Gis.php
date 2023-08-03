@@ -80,4 +80,13 @@ class Gis extends CI_Controller {
         );
 		$this->load->view('v_template', $data, false);
 	}
+
+	public function viewinfo()
+	{
+        $data = array(
+            'judul' => 'Informasi',
+            'page' => 'v_info',
+        );
+		$this->load->view('v_template', $data, false);
+	}
 }

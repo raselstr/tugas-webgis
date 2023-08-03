@@ -65,37 +65,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     <li  >
                         <a  href="<?= base_url('gis/viewpolygon'); ?>"><i class="fa fa-edit"></i> Polygon </a>
                     </li>				
-					
-					                   
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
 
-                                </ul>
-                               
-                            </li>
-                        </ul>
-                      </li>  
                   <li  >
-                        <a class="active-menu"  href="blank.html"><i class="fa fa-square-o"></i> Blank Page</a>
+                        <a class="active-menu"  href="<?= base_url('gis/viewinfo'); ?>"><i class="fa fa-square-o"></i> Info</a>
                     </li>	
                 </ul>
                
