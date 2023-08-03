@@ -39,7 +39,7 @@
 
                 ];
 
-    var polygon = L.polygon(latlngs, {color: 'red'}).addTo(map);
+    var polygon = L.polygon(latlngs, {color: 'red'}).bindPopup("Wilayah Kecamatan Air Joman").addTo(map);
 
     var latkisbar = [[3.010890180743631, 99.56901424639086],
                    [3.010890180743631, 99.56753466474493],
@@ -85,6 +85,6 @@
                    [2.984655983354243, 99.56520898905258],
                 ];
 
-    var polygon = L.polygon(latkisbar, {color: 'blue'}).addTo(map);
+    var polygon = L.polygon(latkisbar, {color: 'blue', fillOpacity : 0.5}).bindPopup("Wilayah Kecamatan Kota Kisaran Barat").addTo(map);
 
 </script>
