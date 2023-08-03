@@ -23,7 +23,7 @@
             <td>RAHMAD SALEH SITORUS</td>
         </tr>
         <tr>
-            <td>Nim</td>
+            <td>NIM</td>
             <td>:</td>
             <td>222210612</td>
         </tr>
