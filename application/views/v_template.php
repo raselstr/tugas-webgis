@@ -13,6 +13,16 @@
     <link href="<?= base_url('binary-admin/'); ?>assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+   <!-- JQUERY SCRIPTS -->
+    <script src="<?= base_url('binary-admin/'); ?>assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="<?= base_url('binary-admin/'); ?>assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="<?= base_url('binary-admin/'); ?>assets/js/jquery.metisMenu.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="<?= base_url('binary-admin/'); ?>assets/js/custom.js"></script>
+    
    
    <!-- Library Leaflet Template -->
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -64,9 +74,17 @@ font-size: 16px;"> Last access : 03 Agustus 2023 &nbsp; <a href="#" class="btn b
                     </li>
                     <li  >
                         <a  href="<?= base_url('gis/viewpolygon'); ?>"><i class="fa fa-edit"></i> Polygon </a>
-                    </li>				
+                    </li>
+                    
+                    <li  >
+                        <a  href="<?= base_url('gis/viewgeojson'); ?>"><i class="fa fa-edit"></i> GeoJSON </a>
+                    </li>
 
-                  <li  >
+                    <li  >
+                        <a  href="<?= base_url('gis/viewgetcoordinat'); ?>"><i class="fa fa-edit"></i> Get Coordinat </a>
+                    </li>
+
+                    <li  >
                         <a class="active-menu"  href="<?= base_url('gis/viewinfo'); ?>"><i class="fa fa-square-o"></i> Info</a>
                     </li>	
                 </ul>
@@ -101,14 +119,6 @@ font-size: 16px;"> Last access : 03 Agustus 2023 &nbsp; <a href="#" class="btn b
         </div>
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="<?= base_url('binary-admin/'); ?>assets/js/jquery-1.10.2.js"></script>
-      <!-- BOOTSTRAP SCRIPTS -->
-    <script src="<?= base_url('binary-admin/'); ?>assets/js/bootstrap.min.js"></script>
-    <!-- METISMENU SCRIPTS -->
-    <script src="<?= base_url('binary-admin/'); ?>assets/js/jquery.metisMenu.js"></script>
-      <!-- CUSTOM SCRIPTS -->
-    <script src="<?= base_url('binary-admin/'); ?>assets/js/custom.js"></script>
     
    
 </body>

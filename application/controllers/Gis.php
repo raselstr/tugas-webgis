@@ -89,4 +89,22 @@ class Gis extends CI_Controller {
         );
 		$this->load->view('v_template', $data, false);
 	}
+
+	public function viewgeojson()
+	{
+        $data = array(
+            'judul' => 'Geo Json',
+            'page' => 'v_geojson',
+        );
+		$this->load->view('v_template', $data, false);
+	}
+
+	public function viewgetcoordinat()
+	{
+        $data = array(
+            'judul' => 'Coordinat',
+            'page' => 'v_getcoordinat',
+        );
+		$this->load->view('v_template', $data, false);
+	}
 }
