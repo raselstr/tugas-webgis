@@ -127,6 +127,8 @@
 
 	};
 
+    var layercontrol = L.control.layers(baseLayers).addTo(map);
+
     // Get Coordinate
     // var latInput = document.querySelector("[name=Latitude]");
     // var lngInput = document.querySelector("[name=Longitute]");

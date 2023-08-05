@@ -11,10 +11,14 @@ class Lokasi extends CI_Controller {
 		
 	}
 	
-
+	// Pemetaan Lokasi
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data = array(
+            'judul' => 'Pemetaan Coordinat',
+            'page' => 'lokasi/v_pemetaan_lokasi',
+        );
+		$this->load->view('v_template', $data, false);
 	}
 
     public function input()

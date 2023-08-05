@@ -93,7 +93,7 @@ font-size: 16px;"> Last access : 03 Agustus 2023 &nbsp; <a href="#" class="btn b
                                 <a href="<?= base_url('Lokasi/input'); ?>">Input Lokasi</a>
                             </li>
                             <li>
-                                <a href="#">Pemetaan Lokasi</a>
+                                <a href="<?= base_url('Lokasi/index'); ?>">Pemetaan Lokasi</a>
                             </li>
                         </ul>
                     </li>
