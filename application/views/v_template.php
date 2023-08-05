@@ -84,9 +84,23 @@ font-size: 16px;"> Last access : 03 Agustus 2023 &nbsp; <a href="#" class="btn b
                         <a  href="<?= base_url('gis/viewgetcoordinat'); ?>"><i class="fa fa-edit"></i> Get Coordinat </a>
                     </li>
 
+                    
+                    
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-3x"></i> Lokasi<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="<?= base_url('Lokasi/input'); ?>">Input Lokasi</a>
+                            </li>
+                            <li>
+                                <a href="#">Pemetaan Lokasi</a>
+                            </li>
+                        </ul>
+                    </li>
+                      
                     <li  >
                         <a class="active-menu"  href="<?= base_url('gis/viewinfo'); ?>"><i class="fa fa-square-o"></i> Info</a>
-                    </li>	
+                    </li>
                 </ul>
                
             </div>
