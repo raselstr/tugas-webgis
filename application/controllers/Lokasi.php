@@ -55,10 +55,48 @@ class Lokasi extends CI_Controller {
 			$this->session->set_flashdata('pesan', 'Data Lokasi Berhasil Disimpan !!');
 			
 			redirect('lokasi/input');
-		}
+		}        
+	}
+
+	public function edit($id)
+	{
+		$this->form_validation->set_rules('nama_lokasi', 'Nama Lokasi', 'required', array(
+			'required' =>'%s  Wajib Diisi !'
+		));
 		
+		$this->form_validation->set_rules('latitude', 'Latitude', 'required', array(
+			'required' =>'%s  Wajib Diisi !'
+		));
+
+		$this->form_validation->set_rules('longitude', 'Longitude', 'required', array(
+			'required' =>'%s  Wajib Diisi !'
+		));
+
+		if ($this->form_validation->run()==FALSE) {
+
+			$data = array(
+				'judul' => 'Edit Lokasi',
+				'page' => 'lokasi/v_edit_lokasi',
+				'lokasi' => $this->m_lokasi->detail($id),
+			);
+
+			$this->load->view('v_template', $data, false);
+		} else {
+			# simpang ke database
+			$data = array(
+				'id' => $id,
+				'nama_lokasi' => $this->input->post('nama_lokasi'),
+				'latitude' => $this->input->post('latitude'),
+				'longitude' => $this->input->post('longitude'),
+			);
+			$this->m_lokasi->edit($data);
+			// Data Berhasil disimpang
+			$this->session->set_flashdata('pesan', 'Data Lokasi Berhasil DiEdit !!');
+			
+			redirect('lokasi/index');
+		}        
 
 
-        
+		
 	}
 }

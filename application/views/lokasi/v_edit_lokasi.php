@@ -16,22 +16,22 @@
         }
 
         ?>
-        <?= form_open('lokasi/input'); ?>
+        <?= form_open('lokasi/edit/'.$lokasi->id); ?>
             <div class="form-group">
                 <label>Nama Lokasi</label>
-                <input class = "form-control" name="nama_lokasi" placeholder="Nama Lokasi">
+                <input value="<?= $lokasi->nama_lokasi ?>"  class = "form-control" name="nama_lokasi" placeholder="Nama Lokasi">
             </div>
             <div class="form-group">
                 <label>Latitude</label>
-                <input class = "form-control" name="latitude" id="Latitude" placeholder="Latitude">
+                <input value="<?= $lokasi->latitude ?>"class = "form-control" name="latitude" id="Latitude" placeholder="Latitude">
             </div>
             <div class="form-group">
                 <label>Longitude</label>
-                <input class = "form-control" name="longitude" id="Longitude" placeholder="Longitude">
+                <input value="<?= $lokasi->longitude ?>"class = "form-control" name="longitude" id="Longitude" placeholder="Longitude">
             </div>
 
             <button type = "submit" class = "btn btn-primary">Simpan</button>
-            <button type = "reset" class = "btn btn-warning">Reset</button>
+            <a href="<?= base_url('lokasi/index'); ?>" class = "btn btn-warning">Kembali</a>
         <?= form_close(); ?>
     </div>
 </div>
@@ -108,7 +108,7 @@
     });
 
     var map = L.map('map', {
-		center: [2.987555901997222, 99.6228673583151],
+		center: [<?= $lokasi->latitude ?>, <?= $lokasi->longitude ?>],
 		zoom: 5,
 		layers: [peta3],
 	});
@@ -136,7 +136,7 @@
     var latInput = document.getElementById('Latitude');
     var lngInput = document.getElementById('Longitude');
 
-    var curLocation = [-0.7361645183095288, 118.35163039557897];
+    var curLocation = [<?= $lokasi->latitude ?>, <?= $lokasi->longitude ?>];
 
     map.attributionControl.setPrefix(false);
 

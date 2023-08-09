@@ -96,7 +96,13 @@
         L.marker([<?= $value->latitude ?>, <?= $value->longitude ?>])
         .bindPopup('<b><?= $value->nama_lokasi ?></b><br>'+
                     'Latitude : <?= $value->latitude ?><br>'+
-                    'Longitude : <?= $value->longitude ?>')
+                    'Longitude : <?= $value->longitude ?><br><br>'+
+                    '<div class="text-center">' +
+                    '<a class="btn btn-xs btn-success"' +
+                    'href="<?= base_url("lokasi/edit/".$value->id) ?>">Edit</a>   '+
+                    '<a class="btn btn-xs btn-danger"' +
+                    'href="<?= base_url('lokasi/delete/'.$value->id) ?>">Hapus</a>'+
+                    '</div></div>')
         .addTo(map);
 
     
