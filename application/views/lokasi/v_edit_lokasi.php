@@ -109,8 +109,8 @@
 
     var map = L.map('map', {
 		center: [<?= $lokasi->latitude ?>, <?= $lokasi->longitude ?>],
-		zoom: 5,
-		layers: [peta3],
+		zoom: 13,
+		layers: [peta2],
 	});
 
     var baseLayers = {

@@ -71,9 +71,9 @@
     });
 
     var map = L.map('map', {
-		center: [2.987555901997222, 99.6228673583151],
-		zoom: 5,
-		layers: [peta3],
+		center: [2.99913657150925, 99.62827943754945],
+		zoom: 13,
+		layers: [peta2],
 	});
 
     var baseLayers = {

@@ -108,9 +108,9 @@
     });
 
     var map = L.map('map', {
-		center: [2.987555901997222, 99.6228673583151],
-		zoom: 5,
-		layers: [peta3],
+		center: [2.99913657150925, 99.62827943754945],
+		zoom: 13,
+		layers: [peta2],
 	});
 
     var baseLayers = {
@@ -136,7 +136,7 @@
     var latInput = document.getElementById('Latitude');
     var lngInput = document.getElementById('Longitude');
 
-    var curLocation = [-0.7361645183095288, 118.35163039557897];
+    var curLocation = [2.99913657150925, 99.62827943754945];
 
     map.attributionControl.setPrefix(false);
 
