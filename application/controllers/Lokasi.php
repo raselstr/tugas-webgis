@@ -17,6 +17,7 @@ class Lokasi extends CI_Controller {
 		$data = array(
             'judul' => 'Pemetaan Coordinat',
             'page' => 'lokasi/v_pemetaan_lokasi',
+			'lokasi' => $this->m_lokasi->allData(),
         );
 		$this->load->view('v_template', $data, false);
 	}

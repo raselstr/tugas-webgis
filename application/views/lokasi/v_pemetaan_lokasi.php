@@ -92,6 +92,14 @@
 
     var layercontrol = L.control.layers(baseLayers).addTo(map);
 
+    <?php foreach($lokasi as $key=>$value) { ?>
+        L.marker([<?= $value->latitude ?>, <?= $value->longitude ?>])
+        .bindPopup('<b><?= $value->nama_lokasi ?></b><br>'+
+                    'Latitude : <?= $value->latitude ?><br>'+
+                    'Longitude : <?= $value->longitude ?>')
+        .addTo(map);
+
     
+    <?php } ?>
 
 </script>

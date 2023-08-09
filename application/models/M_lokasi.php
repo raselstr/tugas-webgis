@@ -13,6 +13,11 @@ class M_lokasi extends CI_Model {
 	// Ambil data dari database
 	public function allData()
 	{
-		db->
+		$this->db->select('*');
+		$this->db->from('tbl_lokasi');
+		return $this->db->get()->result();
+		
+		
+		
 	}
 }
