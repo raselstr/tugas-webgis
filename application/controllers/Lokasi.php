@@ -94,9 +94,35 @@ class Lokasi extends CI_Controller {
 			$this->session->set_flashdata('pesan', 'Data Lokasi Berhasil DiEdit !!');
 			
 			redirect('lokasi/index');
-		}        
-
-
+		}
 		
+	}
+
+	public function detail($id)
+	{
+		$data = array(
+		'judul' => 'Detail Posisi Coordinat',
+		'page' => 'lokasi/v_detail_lokasi',
+		'lokasi' => $this->m_lokasi->detail($id),
+	);
+	$this->load->view('v_template', $data, false);
+	}
+
+	public function delete($id)
+	{
+		$data = array('id' => $id);
+		$this->m_lokasi->delete($data);
+		$this->session->set_flashdata('pesan','Data Lokasi Berhasil di Hapus !!');
+		redirect('lokasi/index');
+	}
+
+	public function listlokasi()
+	{
+		$data = array(
+            'judul' => 'List Lokasi',
+            'page' => 'lokasi/v_list_lokasi',
+			'lokasi' => $this->m_lokasi->allData(),
+        );
+		$this->load->view('v_template', $data, false);
 	}
 }

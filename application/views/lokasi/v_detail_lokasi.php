@@ -1,14 +1,29 @@
-<?php 
-// Notifikasi Pesan data berhasil disimpan
-        if($this->session->flashdata('pesan')) {
-            echo '<div class="alert alert-success">';
-            echo $this->session->flashdata('pesan');
-            echo '</div>';
+<div class="row">
+    <div class="col-sm-6">
+        <div id="map" style="width: 100%; height: 600px;"></div>
+    </div>
+    <div class="col-sm-6">
+        <table class="table table-bordered">
+            <tr>
+                <th>Nama Lokasi</th>
+                <td>:</td>
+                <td><?= $lokasi->nama_lokasi ?></td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td>:</td>
+                <td><?= $lokasi->latitude ?></td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td>:</td>
+                <td><?= $lokasi->longitude ?></td>
+            </tr>
+        </table>
+        <a href="<?= base_url('lokasi/index'); ?>" class = "btn btn-warning">Kembali</a>
+    </div>
+</div>
 
-        }
-?>
-
-<div id="map" style="width: 100%; height: 600px;"></div>
 
 <script>
     // var map = L.map('map').setView([2.987555901997222, 99.6228673583151], 13);
@@ -81,7 +96,7 @@
     });
 
     var map = L.map('map', {
-		center: [2.99913657150925, 99.62827943754945],
+		center: [<?= $lokasi->latitude ?>, <?= $lokasi->longitude ?>],
 		zoom: 13,
 		layers: [peta2],
 	});
@@ -99,25 +114,14 @@
         'Peta Lokasi & Tempat': peta10,
 
 	};
+    L.marker([<?= $lokasi->latitude ?>, <?= $lokasi->longitude ?>])
+        .addTo(map)
+        .bindPopup('<b><?= $lokasi->nama_lokasi ?></b><br>'+
+                    'Latitude : <?= $lokasi->latitude ?><br>'+
+                    'Longitude : <?= $lokasi->longitude ?><br><br>')
+        .openPopup();
 
-    var layercontrol = L.control.layers(baseLayers).addTo(map);
 
-    <?php foreach($lokasi as $key=>$value) { ?>
-        L.marker([<?= $value->latitude ?>, <?= $value->longitude ?>])
-        .bindPopup('<b><?= $value->nama_lokasi ?></b><br>'+
-                    'Latitude : <?= $value->latitude ?><br>'+
-                    'Longitude : <?= $value->longitude ?><br><br>'+
-                    '<div class="text-center">' +
-                    '<a class="btn btn-xs btn-success"' +
-                    'href="<?= base_url("lokasi/edit/".$value->id) ?>">Edit</a>   '+
-                    '<a class="btn btn-xs btn-warning"' +
-                    'href="<?= base_url("lokasi/detail/".$value->id) ?>">Detail</a>   '+
-                    '<a onclick="return confirm()" class="btn btn-xs btn-danger"' +
-                    'href="<?= base_url('lokasi/delete/'.$value->id) ?>">Hapus</a>'+
-                    '</div></div>')
-        .addTo(map);
 
-    
-    <?php } ?>
 
 </script>

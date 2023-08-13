@@ -37,4 +37,11 @@ class M_lokasi extends CI_Model {
 		$this->db->update('tbl_lokasi', $edit);
 		
 	}
+
+	public function delete($edit)
+	{
+		$this->db->where('id', $edit['id']);
+		$this->db->delete('tbl_lokasi', $edit);
+		
+	}
 }

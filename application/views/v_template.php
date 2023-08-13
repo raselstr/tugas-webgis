@@ -14,6 +14,9 @@
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+    <!-- TABLE STYLES-->
+    <link href="<?= base_url('binary-admin/'); ?>assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    
    <!-- JQUERY SCRIPTS -->
     <script src="<?= base_url('binary-admin/'); ?>assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
@@ -95,6 +98,9 @@ font-size: 16px;"> Last access : 03 Agustus 2023 &nbsp; <a href="#" class="btn b
                             <li>
                                 <a href="<?= base_url('Lokasi/index'); ?>">Pemetaan Lokasi</a>
                             </li>
+                            <li>
+                                <a href="<?= base_url('Lokasi/listlokasi'); ?>">List Lokasi</a>
+                            </li>
                         </ul>
                     </li>
                       
@@ -133,7 +139,14 @@ font-size: 16px;"> Last access : 03 Agustus 2023 &nbsp; <a href="#" class="btn b
         </div>
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    
+    <!-- DATA TABLE SCRIPTS -->
+    <script src="<?= base_url('binary-admin/'); ?>assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="<?= base_url('binary-admin/'); ?>assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
    
 </body>
 </html>
